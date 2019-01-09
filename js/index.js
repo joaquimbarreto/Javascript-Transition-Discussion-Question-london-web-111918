@@ -11,12 +11,13 @@
 let lincoln = document.getElementById('save_lincoln')
 let milliseconds = document.getElementById('interval')
 
-lincoln.addEventListener("click", fadeOutEffect(saveLincoln(parseInt(milliseconds))))
+lincoln.addEventListener("click", saveLincoln, parseInt(milliseconds))
 
 function saveLincoln(milliseconds) {
   if(isNaN(milliseconds)) {
     milliseconds = 100
   }
+  fadeOutEffect(milliseconds);
 }
 
 function fadeOutEffect(milliseconds) {
